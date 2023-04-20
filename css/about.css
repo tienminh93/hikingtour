@@ -1,0 +1,283 @@
+
+.banner-about{
+    background-image: url(../img/hiking-img/hiking-slider.jpg);
+    background-position : bottom;
+    background-size: cover;
+    width: 100%;
+    padding: 200px 0;
+}
+.banner-about h2{
+    color: white;
+    font-size: 60px;
+    font-weight: 900 ;
+}
+
+.knowus{
+    background-image: url(../img/about/bg-trans.png);
+    background-size: cover;
+    background-position-y: center;
+    position: relative;
+    padding: 50px 0;
+}
+.knowus::before{
+    position: absolute;
+    content: "";
+    display: block;
+    background-image: url(../img/about/shape8-1.png);
+    top: -200px;
+    width: 100%;
+    height: 200px;
+    background-size: cover;
+}
+.knowus .knowus-ctn{
+    border-bottom: 1px solid rgba(97, 97, 97, 0.808);
+    margin-bottom: 10px;
+}
+.knowus .knowus-ctn h5{
+    color: var(--secondarycolor);
+}
+.knowus .knowus-ctn h2{
+    color: var(--primarycolor);
+}
+.knowus .under{
+    display: flex;
+}
+.knowus .under .guide{
+    display: flex;
+}
+.knowus .under .guide i{
+    margin-right: 10px;
+    margin-top: 3px;
+    color: var(--primarycolor);
+}
+.knowus .under .price{
+    display: flex;
+    margin-left: 50px;
+}
+.knowus .under .price i{
+    margin-right: 10px;
+    margin-top: 3px;
+    color: var(--primarycolor);
+}
+.knowus .under .package{
+    display: flex;
+    margin-left: 50px;
+}
+.knowus .under .package i{
+    margin-right: 10px;
+    margin-top: 3px;
+    color: var(--primarycolor);
+}
+.knowus .table{
+    display: flex;
+    margin-top: 50px;
+    background-color: white;
+    padding: 20px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border-radius: 10px;
+}
+.knowus .table .col{
+    text-align: center;
+    justify-content: center;
+    border-right: 1px solid rgba(136, 135, 135, 0.692);
+}
+.knowus .table .col:last-child{
+    border-right: none;
+}
+.knowus .table .col h3{
+    color: var(--secondarycolor);
+    font-weight: 700;
+}
+.knowus .table .number{
+    color: var(--secondarycolor);
+    font-weight: 900;
+    font-size: 40px;
+}
+.knowus-right img{
+    width: 60%;
+    margin-left: 100px;
+    position: relative;
+    margin: 0 auto;
+
+}
+.knowus-right{
+    position: relative;
+}
+.knowus-right::before{
+    position: absolute;
+    content: "";
+    display: block;
+    width: 500px;
+    height: 500px;
+    background-color: var(--secondarycolor);
+    border-radius: 100%;
+    animation: zoombackgrond 3s infinite alternate;
+    /* margin-left: 50px; */
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    text-align: center;
+}
+
+.guide .guide-card .guide-card-body{
+    text-align: center;
+    justify-content: center;
+    background-color: var(--primarycolor);
+    padding: 20px;
+}
+.guide .guide-card .guide-card-body h4{
+    color: white;
+}
+.guide .guide-card .guide-card-body p{
+    color: var(--secondarycolor);
+    font-weight: 500;
+}
+.guide .guide-card{
+    position: relative;
+}
+.guide .guide-card .guide-social{
+    position: absolute;
+    top: 150px;
+    right: 60px;
+}
+.guide .guide-card .guide-social i{
+    color: white;
+   font-size: 30px;
+   padding: 5px;
+   margin-bottom: 50px;
+   opacity: 0;
+   transform: translateY(-30px);
+   transition: 0.5s;
+
+}
+.guide .guide-card .guide-social i:nth-child(2){
+    transition-delay: 0.1s;
+}
+.guide .guide-card .guide-social i:nth-child(3){
+    transition-delay: 0.2s;
+}
+.guide .guide-card .guide-social i:nth-child(4){
+    transition-delay: 0.3s;
+}
+.guide .guide-card:hover .guide-social{
+    opacity: 1;
+}
+.guide .guide-card:hover .guide-social i{
+    opacity: 1;
+    transform: translateY(0);
+}
+.guide .guide-card{
+    position: relative;
+    margin-top: 20px;
+}
+.guide .guide-card::before{
+    position: absolute;
+    content: "";
+    display: block;
+    width: 100%;
+    height: 78.5%;
+    background-color: rgba(80, 79, 79, 0.596);
+    opacity: 0;
+    transition: 0.5s;
+}
+.guide .guide-card:hover::before{
+    opacity: 1;
+}
+.activities{
+    margin-bottom: 20px;
+    background-image: url(../img/about/testimonial.png);
+}
+.activities .activities-col1 h3{
+    border-bottom: 2px solid var(--secondarycolor);
+    padding-bottom: 20px;
+    margin-bottom: 10px;
+}
+.activities .activities-col2{
+    margin-top: 20px;
+}
+.activities .activities-col3{
+    margin-top: 20px;
+}
+.activities .activities-col2 .ac-img1 img{
+    margin-bottom: 20px;
+}
+
+.activities .activities-col3 img{
+    margin-bottom: 20px;
+}
+.partner .partner-logo img{
+    padding: 20px;
+} 
+.footer{
+    margin-top: 100px;
+}
+@keyframes zoombackgrond {
+    from{
+        transform: scale(0.9)
+        
+    }
+    to{
+        transform: scale(1)
+    }
+}
+@media (max-width: 1399px) {
+    .knowus-right img{
+       margin-left: 100px;
+    }
+    .knowus-right::before{
+        width: 450px;
+        height: 450px;
+     }
+}
+@media (max-width: 1199px) {
+
+    .knowus-right::before{
+        width: 400px;
+        height: 400px;
+     }
+}
+@media (max-width: 991px) {
+    .knowus-right::before{
+        width: 500px;
+        height: 500px;
+        margin-top: 30px;
+     }
+
+}
+@media (max-width: 767px) {
+    .knowus-right::before{
+       width: 400px;
+       height: 400px;
+    }
+}
+@media (max-width: 535px) {
+    .knowus-right::before{
+        width: 300px;
+        height: 300px;
+        margin-left: 100px;
+     }
+    
+}
+@media (max-width: 470px) {
+    .knowus-right::before{
+        width: 300px;
+        height: 300px;
+        margin-left: 50px;
+     }
+    
+}
+@media (max-width: 452px) {
+    .activities{
+        margin-top: 40px;
+    }
+    
+}
+@media (max-width: 445px) {
+    .knowus-right::before{
+        width: 300px;
+        height: 300px;
+        margin-left: 50px;
+        margin-top: 10px;
+     }
+    
+}

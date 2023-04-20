@@ -1,0 +1,774 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+img {
+    width: 100%;
+    display: block;
+}
+a{
+    text-decoration: none;
+    color: #000;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+    --primarycolor:#193555;
+    --secondarycolor:#ffa019;
+}
+.navbar{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+}
+.navbar-brand img{
+    width: 50%;
+}
+.nav-link::after{
+    content: "";
+    display: block;
+    height: 2px;
+    width: 0%;
+    background-color: var(--secondarycolor);
+    transition: 0.5s;
+}
+
+  
+.nav-link {
+    margin-left: 40px;
+    color: #697e8a;
+    transition: 0.5s;
+    position: relative;
+    font-size: 18px;
+    font-weight: 500;
+}
+.nav-link:hover{
+    color: var(--secondarycolor);
+}
+.nav-link:hover::after{
+    width: 100%;
+}
+.navbar-nav{
+    margin-left: auto;
+}
+.banner{
+    background-image: url(../img/hiking-img/hiking-slider.jpg);
+    padding: 150px;
+    position: relative;   
+    height: 100vh;
+}
+.banner .mask img{
+    position: absolute;
+    left: 0px;
+    bottom: -70px;
+    margin-bottom: 20px;
+}
+.banner .content{
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.banner .content .title::after{
+    content: "";
+    position: absolute;
+    display: block;
+    height: 70px;
+    width: 2px;
+    background-color: rgb(255, 255, 255);
+    top: 230px;
+}
+.banner .content .title{
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+.banner .content h2{
+    color:#ffa019;
+    font-size: 150px;
+    font-family: 'Oswald', sans-serif;
+    transform: translateY(100px) rotate(341deg);
+}
+
+.banner .content h3{
+    color: #48545c;
+    font-size: 150px;
+    font-family: 'Oswald', sans-serif;
+    font-weight: bold;
+    margin-left: 50px;
+}
+.choose{
+    background-image:url(../img/hiking-img/mountain-bg-1.jpg);
+    background-position-y: -138px;
+    background-size: cover;
+    padding-bottom: 50px;
+}
+.choose-icon h2{
+    position: relative;
+    
+}
+.choose-icon h2::after{
+    content: "";
+    display: block;
+    margin-top: 20px;
+    background-color: var(--secondarycolor);
+    width: 40px;
+    height: 4px;
+}
+.choose-icon img{
+    width: 8%;  
+}
+.choose-icon h2{
+    font-family: 'Oswald', sans-serif;
+    font-size: 38px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    color: #193555;
+    margin-top: 20px;
+    padding-bottom: 20px;
+}
+.choose-icon p{
+    color:#687d8e;
+}
+
+
+@keyframes zoomimg {
+    from{
+        transform: scale(0);
+    }
+    to{
+        transform: scale(1) rotate(360deg);
+    }
+}
+
+@keyframes pozition {
+    from{
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    to{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes trany {
+    from{
+        transform: translateY(30px);
+        opacity: 0;
+    }
+    to{
+        transform:translateY(0px) ;
+        opacity: 1;
+    }
+}
+.btn-1{
+    background-color: white;
+    padding: 15px;
+    transition: 0.5s;
+    position: relative;
+    animation: trany 3s;
+    border-radius: 20px;
+    top: 150px;
+}
+.btn-1::before{
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 0;
+    background-color: var(--secondarycolor);
+    right: 0;
+    top: 0;
+    transition: 0.5s;
+    border-radius: 20px;
+}
+.btn-1:hover::before{
+    height: 100%;
+}
+.btn-1 span{
+    position: relative;
+    z-index: 1;
+    transition: 0.5s;
+}
+.btn-1:hover span{
+    color: white;
+}
+.introduce{
+    align-items: center;
+    margin: 0 auto;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    position: relative;
+    padding: 20px;
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+.introduce img{
+    width: 30%;
+    align-items: center;
+    margin: 0 auto;
+}
+.content{
+    text-align: center;
+    padding: 30px;
+}
+.content h6{
+    font-size: 20px;
+    color: var(--secondarycolor);
+    margin-bottom: 2px;
+    margin-top: 50px;
+}
+.content h2{
+    font-family: 'Oswald', sans-serif;;
+    color: var(--primarycolor);
+    font-size: 60px;
+    font-weight: 800;
+}
+.content h5{
+    font-size: 20px;
+    color: var(--secondarycolor);
+}
+.content p{
+    font-size: 20px;
+}
+.core{
+    padding: 30px;
+    
+}
+.core .core-card{
+    border: 2px solid #f1f1f1;
+    padding: 20px;
+    border-radius: 20px;
+    position: relative; 
+    margin-top: 20px;
+}
+.core .core-card::before{
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 0%;
+    background-color: var(--primarycolor);
+    top: 0;
+    left: 0;
+    border-radius: 20px;
+    transition: 0.5s;
+}
+.core .core-card:hover::before{
+    height: 100%;  
+}
+.core .core-card i{
+    transition: 0.5s;
+}
+.core .core-card:hover i{
+    color: white;
+}
+.core .core-card h4{
+    transition: 0.5s;
+}
+.core .core-card:hover h4{
+    color: white;
+}
+.core .core-card p{
+    transition: 0.5s;
+}
+.core .core-card:hover p{
+    color: white;
+}
+.core .core-card span{
+    transition: 0.5s;
+}
+.core .core-card:hover span{
+    color: white;
+}
+.core .core-card .ctn{
+    position: relative;
+    z-index: 0;
+}
+.core .core-card i{
+    color: var(--primarycolor);
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+.core .core-card h4{
+    color: rgba(0, 0, 0, 0.849);
+    font-family: 'Oswald', sans-serif;;
+}
+.core .core-card p{
+    font-size: 15px;
+}
+.core .core-card span{
+    color: var(--secondarycolor);
+}
+.deal{
+    margin-top: 50px;
+    background-image: url(../img/hiking-img/tour-item-bg.jpg);
+    background-size: cover;
+    padding-bottom: 50px;
+}
+
+.deal .deal-card{
+    position: relative;
+    background-color: white;
+    margin-right: 20px;
+}
+.deal .deal-card .deal-img{
+    overflow: hidden;
+}
+.deal .deal-card img{
+    transition: 0.5s;
+}
+.deal .deal-card img:hover{
+    transform: scale(1.1);
+}
+.deal .deal-card .hotdeal{
+    position: absolute;
+    left: 40px;
+    top: 55%;
+} 
+.deal .deal-card .hotdeal p{
+    color: white;
+    background-color: #ffa11a;
+    padding: 10px 17px;
+}
+.deal .deal-card .deal-info{
+    padding: 0px 20px 20px 20px;
+}
+.deal .deal-card .deal-info .title {
+    margin-top: 50px;
+}
+.deal .deal-card .deal-info .title h4{
+    font-weight: 700;
+}
+.deal .deal-card .title{
+    display: flex;
+    margin-top: 20px;
+}
+.deal .deal-card .title i{
+    margin-right: 10px;
+    color: var(--secondarycolor);
+    font-size: 25px;
+    align-items: center;
+}
+.deal .deal-card .timeline{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+.deal .deal-card .timeline h5{
+    margin-bottom: 0 !important;
+    font-size: 15px;
+}
+.deal .deal-card .timeline i{
+    color: var(--primarycolor);
+    font-size: 25px;
+}
+.deal .deal-card .deal-list{
+    align-items: center;
+}
+.deal .deal-card .deal-list .star i{
+    color: var(--secondarycolor);
+    margin-top: 5px;
+    font-size: 15px;
+}
+.deal .deal-card .price h3 {
+    font-weight: 800;
+    color: var(--secondarycolor);
+}
+.deal .slick-next{
+    right: -35px;
+}
+.deal .slick-prev{
+    left: -55px;
+}
+.deal .slick-arrow{
+    border:2px solid var(--primarycolor)
+}
+.deal .slick-arrow::before{
+    color: var(--primarycolor);
+}
+.deal .slick-dots{
+
+}
+.view button span{
+    position: relative;
+    z-index: 1;
+}
+.view button{
+    background-color: var(--primarycolor);
+    color: white;
+    padding: 10px;
+    border: none;
+    margin-top: 30px;
+    position: relative;
+}
+.view button::before{
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 0%;
+    background-color: var(--secondarycolor);
+    right: 0;
+    top: 0;
+    transition: 0.5s;
+}
+.view button:hover::before{
+    height: 100%;
+}
+.offer{
+    background-image: url(../img/offer/offer-background.gif);
+    background-size: cover;
+}
+
+.offer .left{
+    display: flex;
+    border-bottom: 1px solid rgb(72 62 62 / 11%);
+    padding-bottom: 20px;
+    margin-top: 50px;
+}
+.offer .left h3{
+    font-family: 'Oswald', sans-serif;;
+    font-weight: 600;
+    transition: 0.3s;
+}
+.offer .left h3:hover{
+    color: var(--secondarycolor);
+}
+.offer .left img{
+    width: 60%;
+    
+}
+.offer .box{
+    width: 60%;
+    margin-left: auto;
+    padding-bottom: 130px;
+}
+.about{
+    background-image: url(../img/user/testimonial.png);
+}
+.about .about-card{
+    display: flex;
+    width: 100%;
+    margin-bottom: 20px;
+    
+}
+.about .about-card .about-talk{
+    font-size: 30px;
+}
+.about .about-card-right{
+    text-align: center;
+    margin-top: 30px;
+}
+.about .about-card-right i{
+    color: var(--secondarycolor);
+    font-size: 30px;
+    
+}
+.about .about-card-right img {
+    border-radius: 50%;
+    width: 10%;
+    align-items: center;
+    margin: 0 auto;
+    padding: 10px;
+}
+.about .about-card-right h6{
+    font-size: 19px;
+    width: 50%;
+    margin: 0 auto;
+    margin-bottom: 10px;
+}
+.about .about-card-right h5{
+    font-size: 25px;
+    font-weight: 600;
+    color: var(--primarycolor);
+}
+.about .about-card-right .star i{
+    color: var(--secondarycolor);
+}
+.about .about-card-left img{
+    width: 50%;
+    margin: 0 auto;
+    justify-items: center;
+    
+}
+.footer{
+    background-image: url(../img/hiking-img/testimonial-bg-1.jpg);
+    background-size: cover;
+    background-position-y: -300px;
+    color: #687d8e;
+}
+.footer .userlink ul li {
+    list-style: none;
+    margin-left: -30px;
+    transition: 0.5s;
+    margin-bottom: 10px;
+}
+.footer .userlink ul li:hover{
+    color: var(--secondarycolor);
+}
+.footer .supportlink ul li {
+    list-style: none;
+    margin-left: -30px;
+    transition: 0.5s;
+    margin-bottom: 10px;
+}
+.footer .supportlink ul li:hover{
+    color: var(--secondarycolor);
+}
+.footer .footer-email{
+    width: 60%;
+    margin: 0 auto;
+    position: relative;
+}
+.footer .footer-email input{
+    width: 100%;
+    padding: 10px;
+    margin: 0px auto 200px;
+    border: none;
+}
+.footer .footer-email i{
+    position: absolute;
+    right: 10px;
+    top: 15px;  
+    color:var(--primarycolor);
+    transition: 0.5s;
+}
+.footer .footer-email i:hover{
+    color: var(--secondarycolor);
+}
+.footer .social i{
+    color: #343434;
+    font-size: 20px;
+    padding: 5px;
+    margin-bottom: 50px;
+    transition: 0.5s;
+ }
+ .footer .social i:hover{
+     transform: scale(1.5);
+     color: var(--secondarycolor);
+ }
+ .footer .address{
+    display: flex;
+    
+}
+.footer .address i{
+    margin-right: 5px;
+    margin-top: 2px;  
+}
+.footer .email{
+    display: flex;
+    
+}
+.footer .email i{
+    margin-right: 5px;
+    margin-top: 5px; 
+}
+.footer .phone{
+    display: flex;
+}
+.footer .phone i{
+    margin-right: 5px;
+    margin-top: 5px;  
+}
+.footer-info{
+    border-top: 1px solid rgb(25 53 85 / 11%);
+}
+.footer-info .info-left{
+    color: var(--primarycolor);
+}
+.footer-info .info-left p{
+    margin-top: 20px;
+    margin-bottom: 50px;
+    transition: 0.5s;
+}
+.footer-info .info-left p:hover{
+    color: var(--secondarycolor);
+}
+.footer-info .info-right{
+    margin-top: 20px;
+    
+}
+.footer-info .info-right a{
+    color: var(--primarycolor);
+    padding: 10px;
+}
+.footer-info .info-right a:hover{
+    color: var(--secondarycolor);
+    transition: 0.5s;
+}
+.footer-title{
+    font-family: 'Oswald', sans-serif;
+    color: var(--primarycolor);
+    font-size: 25px;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+.btn-call{
+    position: fixed;
+    bottom: 0;
+    margin-bottom: 100px;
+    margin-left: 50px;
+    z-index: 9999;
+}
+.btn-call i {
+    position: relative;
+    margin-left: 25px;
+    margin-top: 20px;
+    color: #343434;
+    font-size: 35px; 
+    animation: call 0.3s infinite linear alternate;
+}
+.btn-call::before{
+    position: absolute;
+    content: "";
+    display: block;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: var(--secondarycolor);
+}
+.btn-call span{
+    margin-left: 5px;
+    color: #343434;
+    background-color: var(--secondarycolor);
+    padding: 10px;
+    border-radius: 10px;
+}
+.backtop{
+    position: fixed;
+    bottom: 0;
+    right: 0px;
+    font-size: 55px;
+    transform: rotate(90deg);
+    margin-right: 25px;
+    margin-bottom: 75px;
+    color: var(--secondarycolor);
+    z-index: 99999;
+    visibility: 0;
+    opacity: 0;
+    transition: ease-in-out .2s;
+}
+.show {
+    visibility: 1;
+    opacity: 1;
+    transition: ease-in-out .5s;
+}
+@keyframes call {
+    from{
+        transform: rotate(0deg)
+        
+    }
+    to{
+        transform: rotate(30deg)
+    }
+}
+@media (max-width: 1400px) {
+    .footer{
+        background-position-y: 0;
+    }
+    
+}
+@media (max-width: 991px) {
+    .deal .deal-card .info .dolla h5 {
+    font-size: 10px;  
+    }
+    .deal .deal-card .info .day h5 {
+        font-size: 10px;  
+    }
+    .offer{
+        background-image:linear-gradient(to top, rgba(255, 255, 255, 0.74),rgba(255, 255, 255, 0.74)), url(../img/offer/offer-background.gif);
+    }
+    .offer .box{
+        width: 100%;
+    }
+    .footer{
+        background-position-y: 0;
+    }
+    .banner .content img{
+        width: 60px;
+    }
+    .introduce{
+        width: 100%;
+    }.navbar-collapse{
+        background-color: #00000061;
+    }
+}
+@media (max-width: 900px) {
+    .footer .footer-info{
+        display: block !important;
+    }
+    .footer .footer-info .info-right {
+        text-align: center;
+        margin-top: -20px;
+        padding-bottom: 30px;
+    }
+    .footer .footer-info .info-left {
+        text-align: center;
+        margin-bottom: 10px;
+    }
+}
+@media (max-width: 767px) {
+    .deal .deal-card .info .dolla h5 {
+    font-size: 15px;  
+    }
+    .deal .deal-card .info .day h5 {
+        font-size: 15px;  
+    }
+    .btn-call span{
+        opacity: 0;
+    }
+    .btn-call i{
+        font-size: 25px;
+        margin-left: 20px;
+    }
+    .btn-call::before{
+        width: 60px;
+        height: 60px;
+    }
+}
+
+@media (max-width: 660px) {
+    .banner .content h1 {
+        font-size: 50px;
+    }
+    
+}
+@media (max-width: 575px) {
+    .banner .content h1 {
+        font-size: 30px;
+    }
+    .banner{
+        padding:150px 20px
+    }
+
+    
+}
+@media (max-width: 452px) {
+    .banner .content a {
+        padding: 5px;
+    }
+    .footer-info{
+        margin: 0px 10px;
+    }
+    .content{
+        margin-top: -100px;
+    }
+    .content h2{
+        font-size: 50px;
+    }
+    .footer .footer-email input{
+        margin-bottom: 30px;
+    }
+    .social i{
+        margin-bottom: 10px;
+    }
+    .offer{
+        background-position-y:-80px ;
+        background-position-x:-200px ;
+    }
+}
